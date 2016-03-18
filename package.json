@@ -1,0 +1,21 @@
+{
+  "name": "react-svg",
+  "version": "1.0.0",
+  "description": "SVG components library for ReactJS.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msalsas/react-svg.git"
+  },
+  "keywords": [
+    "svg",
+    "react",
+    "reactjs",
+    "components"
+  ],
+  "author": "@msalsas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msalsas/react-svg/issues"
+  },
+  "homepage": "https://github.com/msalsas/react-svg#readme"
+}
