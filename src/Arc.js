@@ -1,3 +1,7 @@
+var React = require('react');
+var PropTypes = React.PropTypes;
+var Component = React.Component;
+
 class Arc extends Component {
     static propTypes = {
         radius: PropTypes.number,
