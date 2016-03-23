@@ -4,6 +4,10 @@ SVG components built with [React][react].
 
 ## Docs
 
+Usage:
+
+`import Arc from 'react-svg';`
+
 Here's an example for each component:
 
 `<Arc radius={25} degreesOffset={15} degrees={270} strokeWidth={2} strokeColor={'#fff'}/>`
