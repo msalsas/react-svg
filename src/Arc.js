@@ -1,23 +1,19 @@
-var React = require('react');
-
-var Arc = React.createClass({
-    propTypes: {
-        radius: React.PropTypes.number,
-        degreesOffset: React.PropTypes.number,
-        degrees: React.PropTypes.number,
-        strokeWidth: React.PropTypes.number,
-        strokeColor: React.PropTypes.string
-    },
-    getDefaultProps() {
-        return {
-            radius: 50,
-            degreesOffset: 45,
-            degrees: 360,
-            strokeWidth: 5,
-            strokeColor: '#fff'
-        };
-    },
-    render: function() {
+class Arc extends Component {
+    static propTypes = {
+        radius: PropTypes.number,
+        degreesOffset: PropTypes.number,
+        degrees: PropTypes.number,
+        strokeWidth: PropTypes.number,
+        strokeColor: PropTypes.string
+    };
+	static defaultProps = {
+		radius: 50,
+		degreesOffset: 45,
+		degrees: 360,
+		strokeWidth: 5,
+		strokeColor: '#fff'
+    };
+    render() {
         return (
             <svg width={this.props.radius * 2 + this.props.strokeWidth * 2} height={this.props.radius * 2 + this.props.strokeWidth * 2} xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -26,20 +22,18 @@ var Arc = React.createClass({
                 </g>
             </svg>
         );
+    }
 
-
-    },
-
-    polarToCartesian: function(radius, angleInDegrees) {
+    polarToCartesian = function(radius, angleInDegrees) {
         var angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
 
         return {
             x: radius + (radius * Math.cos(angleInRadians)),
             y: radius + (radius * Math.sin(angleInRadians))
         };
-    },
+    };
 
-    describeArc: function(radius, strokeWidth, startAngle, endAngle) {
+    describeArc = function(radius, strokeWidth, startAngle, endAngle) {
         endAngle = endAngle === 360 ? 359.9 : endAngle;
         var start = this.polarToCartesian(radius, endAngle);
         var end = this.polarToCartesian(radius, startAngle);
@@ -50,8 +44,7 @@ var Arc = React.createClass({
             "M", start.x + strokeWidth, start.y + strokeWidth,
             "A", radius, radius, 0, largeArcFlag, 0, end.x + strokeWidth, end.y + strokeWidth
         ].join(" ");
-    }
-
-});
+    };
+}
 
 export default Arc;
