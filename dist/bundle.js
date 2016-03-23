@@ -16,12 +16,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-//import React from 'react';
-//var derequire = require('derequire');
-//var tmpReact = require('react');
-//var React = derequire(tmpReact, /*tokenTo=*/'_dereq_', /*tokenFrom=*/'require');
-//var React = require('react');
-
 var Arc = function (_Component) {
     _inherits(Arc, _Component);
 
