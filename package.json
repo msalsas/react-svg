@@ -1,5 +1,5 @@
 {
-  "name": "react-svg",
+  "name": "react-svg-components",
   "version": "1.0.1",
   "description": "SVG components library for ReactJS.",
   "main": "dist/bundle.js",
