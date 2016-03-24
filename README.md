@@ -4,6 +4,10 @@ SVG components built with [React][react].
 
 ## Docs
 
+Installation:
+
+`npm install react-svg-components --save`
+
 Usage:
 
 `import Arc from 'react-svg-components';`
