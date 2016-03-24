@@ -5,7 +5,7 @@
   "main": "dist/bundle.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/msalsas/react-svg.git"
+    "url": "git+https://github.com/msalsas/react-svg-components.git"
   },
   "keywords": [
     "react-component",
@@ -17,9 +17,9 @@
   "author": "@msalsas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/msalsas/react-svg/issues"
+    "url": "https://github.com/msalsas/react-svg-components/issues"
   },
-  "homepage": "https://github.com/msalsas/react-svg#readme",
+  "homepage": "https://github.com/msalsas/react-svg-components#readme",
   "dependencies": {
     "react": "^0.14.7"
   },
