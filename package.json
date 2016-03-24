@@ -1,6 +1,6 @@
 {
   "name": "react-svg-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SVG components library for ReactJS.",
   "main": "dist/bundle.js",
   "repository": {
