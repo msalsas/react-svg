@@ -6,7 +6,7 @@ SVG components built with [React][react].
 
 Usage:
 
-`import Arc from 'react-svg';`
+`import Arc from 'react-svg-components';`
 
 Here's an example for each component:
 
