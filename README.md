@@ -1,4 +1,4 @@
-# react-svg
+# react-svg-components
 
 SVG components built with [React][react].
 
@@ -6,7 +6,7 @@ SVG components built with [React][react].
 
 Installation:
 
-`npm install react-svg-components --save`
+`npm install react-svg-components`
 
 Usage:
 
