@@ -10,7 +10,7 @@ Installation:
 
 Usage:
 
-`import Arc from 'react-svg-components';`
+`import { Arc } from 'react-svg-components';`
 
 Here's an example for each component:
 
