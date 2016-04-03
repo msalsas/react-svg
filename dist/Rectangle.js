@@ -36,7 +36,7 @@ var Rectangle = function (_Component) {
                 React.createElement(
                     'g',
                     null,
-                    React.createElement('rect', { x: this.props.strokeWidth, y: this.props.strokeWidth, width: this.props.width, height: this.props.height, className: 'msalsas-square',
+                    React.createElement('rect', { x: this.props.strokeWidth, y: this.props.strokeWidth, width: this.props.width, height: this.props.height, className: 'msalsas-rectangle',
                         fill: this.props.fillColor, strokeWidth: this.props.strokeWidth, stroke: this.props.strokeColor })
                 )
             );

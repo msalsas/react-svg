@@ -58,7 +58,7 @@ var Arc = function (_Component) {
                     'g',
                     null,
                     React.createElement('path', { d: this.describeArc(this.props.radius, this.props.strokeWidth, this.props.degreesOffset, this.props.degrees), className: 'msalsas-arc',
-                        fill: 'none', strokeWidth: this.props.strokeWidth, stroke: this.props.strokeColor })
+                        fill: this.props.fillColor, strokeWidth: this.props.strokeWidth, stroke: this.props.strokeColor })
                 )
             );
         }
@@ -72,13 +72,15 @@ Arc.propTypes = {
     degreesOffset: PropTypes.number,
     degrees: PropTypes.number,
     strokeWidth: PropTypes.number,
-    strokeColor: PropTypes.string
+    strokeColor: PropTypes.string,
+    fillColor: PropTypes.string
 };
 Arc.defaultProps = {
     radius: 50,
     degreesOffset: 45,
     degrees: 360,
     strokeWidth: 5,
-    strokeColor: '#fff'
+    strokeColor: '#fff',
+    fillColor: 'none'
 };
 exports.default = Arc;

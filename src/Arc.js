@@ -8,21 +8,23 @@ class Arc extends Component {
         degreesOffset: PropTypes.number,
         degrees: PropTypes.number,
         strokeWidth: PropTypes.number,
-        strokeColor: PropTypes.string
+        strokeColor: PropTypes.string,
+        fillColor: PropTypes.string
     };
 	static defaultProps = {
 		radius: 50,
 		degreesOffset: 45,
 		degrees: 360,
 		strokeWidth: 5,
-		strokeColor: '#fff'
+		strokeColor: '#fff',
+        fillColor: 'none'
     };
     render() {
         return (
             <svg width={this.props.radius * 2 + this.props.strokeWidth * 2} height={this.props.radius * 2 + this.props.strokeWidth * 2} xmlns="http://www.w3.org/2000/svg">
                 <g>
                     <path d={this.describeArc(this.props.radius, this.props.strokeWidth, this.props.degreesOffset, this.props.degrees)} className="msalsas-arc"
-                    fill="none" strokeWidth={this.props.strokeWidth} stroke={this.props.strokeColor}/>
+                    fill={this.props.fillColor} strokeWidth={this.props.strokeWidth} stroke={this.props.strokeColor}/>
                 </g>
             </svg>
         );

@@ -23,7 +23,7 @@ class Rectangle extends Component {
         return (
             <svg width={width} height={height} xmlns="http://www.w3.org/2000/svg">
                 <g>
-                    <rect x={this.props.strokeWidth} y={this.props.strokeWidth} width={this.props.width} height={this.props.height} className="msalsas-square"
+                    <rect x={this.props.strokeWidth} y={this.props.strokeWidth} width={this.props.width} height={this.props.height} className="msalsas-rectangle"
                           fill={this.props.fillColor} strokeWidth={this.props.strokeWidth} stroke={this.props.strokeColor}/>
                 </g>
             </svg>
