@@ -24,4 +24,25 @@ Here's an example for each component:
 
 Yes please!
 
+Development:
+
+You can get rid of [react-storybook](https://github.com/kadirahq/react-storybook) for developing components.
+
+`git clone https://github.com/msalsas/react-svg-components.git`
+
+`cd react-svg-components`
+
+`npm install`
+
+`npm run storybook`
+
+Go to [localhost:9001](http://localhost:9001)
+
+Deployment:
+
+To build all components into `dist` directory run:
+
+`gulp build`
+
+
 [react]: http://facebook.github.io/react/
