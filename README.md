@@ -26,7 +26,7 @@ Yes please!
 
 Development:
 
-You can get rid of [react-storybook](https://github.com/kadirahq/react-storybook) for developing components.
+You can use [react-storybook](https://github.com/kadirahq/react-storybook) for developing components.
 
 `git clone https://github.com/msalsas/react-svg-components.git`
 
