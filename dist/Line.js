@@ -6,21 +6,27 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = require('react');
-var PropTypes = React.PropTypes;
-var Component = React.Component;
-
 var Line = function (_Component) {
     _inherits(Line, _Component);
 
     function Line() {
-        var _Object$getPrototypeO;
+        var _ref;
 
         var _temp, _this, _ret;
 
@@ -30,7 +36,7 @@ var Line = function (_Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Line)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.describeLine = function (lineLength, degreesInRadians, offsetY, strokeWidth) {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Line.__proto__ || Object.getPrototypeOf(Line)).call.apply(_ref, [this].concat(args))), _this), _this.describeLine = function (lineLength, degreesInRadians, offsetY, strokeWidth) {
             var start = {
                 x: strokeWidth,
                 y: strokeWidth + offsetY
@@ -56,13 +62,13 @@ var Line = function (_Component) {
             }
             var width = Math.abs(this.props.lineLength * Math.cos(degreesInRadians)) + this.props.strokeWidth * 2;
             var height = Math.abs(this.props.lineLength * Math.sin(degreesInRadians)) + this.props.strokeWidth * 2;
-            return React.createElement(
+            return _react2.default.createElement(
                 'svg',
                 { width: width, height: height, xmlns: 'http://www.w3.org/2000/svg' },
-                React.createElement(
+                _react2.default.createElement(
                     'g',
                     null,
-                    React.createElement('path', { d: this.describeLine(this.props.lineLength, degreesInRadians, offsetY, this.props.strokeWidth), className: 'msalsas-line',
+                    _react2.default.createElement('path', { d: this.describeLine(this.props.lineLength, degreesInRadians, offsetY, this.props.strokeWidth), className: 'msalsas-line',
                         fill: 'none', strokeWidth: this.props.strokeWidth, stroke: this.props.strokeColor })
                 )
             );
@@ -70,18 +76,20 @@ var Line = function (_Component) {
     }]);
 
     return Line;
-}(Component);
+}(_react.Component);
 
 Line.propTypes = {
-    length: PropTypes.number,
-    degrees: PropTypes.number,
-    strokeWidth: PropTypes.number,
-    strokeColor: PropTypes.string
+    length: _propTypes2.default.number,
+    degrees: _propTypes2.default.number,
+    strokeWidth: _propTypes2.default.number,
+    strokeColor: _propTypes2.default.string
 };
+exports.default = Line;
+
+
 Line.defaultProps = {
     lineLength: 150,
     degrees: 45,
     strokeWidth: 5,
     strokeColor: '#fff'
 };
-exports.default = Line;
