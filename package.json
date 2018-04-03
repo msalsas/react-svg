@@ -1,6 +1,6 @@
 {
   "name": "react-svg-components",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "SVG components library for ReactJS.",
   "main": "dist/react-svg-components.js",
   "repository": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/msalsas/react-svg-components#readme",
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "^16.2.0"
   },
   "devDependencies": {
