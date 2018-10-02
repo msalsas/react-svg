@@ -14,9 +14,9 @@ Usage:
 
 Here's an example for each component:
 
-`<Arc radius={25} degreesOffset={15} degrees={270} strokeWidth={2} strokeColor={'#fff'} fillColor={'none'}/>`
+`<Arc radius={25} degreesOffset={15} degrees={270} strokeWidth={2} strokeColor={'#fff'} fillColor={'none'} strokeLinecap={'round'}/>`
 
-`<Line lineLength={150} degrees={15} strokeWidth={5} strokeColor={'#fff'}/>`
+`<Line lineLength={150} degrees={15} strokeWidth={5} strokeColor={'#fff'} strokeLinecap={'square'}/>`
 
 `<Rectangle width={150} height={15} strokeWidth={5} strokeColor={'#fff'} fillColor={'#fff'}/>`
 

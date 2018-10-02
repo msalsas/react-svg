@@ -3,32 +3,35 @@ import { storiesOf, action } from '@storybook/react';
 import Line from '../Line';
 
 storiesOf('Line', module)
-    .add('orange 100px length, 45º', () => {
+    .add('orange 100px length, 45º, butt stroke linecap', () => {
         const props = {
             lineLength: 100,
             degrees: 45,
-            strokeWidth: 3,
-            strokeColor: 'orange'
+            strokeWidth: 10,
+            strokeColor: 'orange',
+            strokeLinecap: 'butt'
         };
 
         return renderLine(props);
     })
-    .add('yellow 50px length, 120º', () => {
+    .add('yellow 50px length, 120º, round stroke linecap', () => {
         const props = {
             lineLength: 50,
             degrees: 120,
-            strokeWidth: 3,
-            strokeColor: 'yellow'
+            strokeWidth: 10,
+            strokeColor: 'yellow',
+            strokeLinecap: 'round'
         };
 
         return renderLine(props);
     })
-    .add('red 80px length, 290º', () => {
+    .add('red 80px length, 290º, square stroke linecap', () => {
         const props = {
             lineLength: 80,
             degrees: 290,
-            strokeWidth: 3,
-            strokeColor: 'red'
+            strokeWidth: 10,
+            strokeColor: 'red',
+            strokeLinecap: 'square'
         };
 
         return renderLine(props);

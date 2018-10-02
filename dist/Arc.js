@@ -57,14 +57,23 @@ var Arc = function (_Component) {
     _createClass(Arc, [{
         key: 'render',
         value: function render() {
+            var _props = this.props,
+                radius = _props.radius,
+                degreesOffset = _props.degreesOffset,
+                degrees = _props.degrees,
+                strokeWidth = _props.strokeWidth,
+                strokeColor = _props.strokeColor,
+                fillColor = _props.fillColor,
+                strokeLinecap = _props.strokeLinecap;
+
             return _react2.default.createElement(
                 'svg',
-                { width: this.props.radius * 2 + this.props.strokeWidth * 2, height: this.props.radius * 2 + this.props.strokeWidth * 2, xmlns: 'http://www.w3.org/2000/svg' },
+                { width: radius * 2 + strokeWidth * 2, height: radius * 2 + strokeWidth * 2, xmlns: 'http://www.w3.org/2000/svg' },
                 _react2.default.createElement(
                     'g',
                     null,
-                    _react2.default.createElement('path', { d: this.describeArc(this.props.radius, this.props.strokeWidth, this.props.degreesOffset, this.props.degrees), className: 'msalsas-arc',
-                        fill: this.props.fillColor, strokeWidth: this.props.strokeWidth, stroke: this.props.strokeColor })
+                    _react2.default.createElement('path', { d: this.describeArc(radius, strokeWidth, degreesOffset, degrees), className: 'msalsas-arc',
+                        fill: fillColor, strokeWidth: strokeWidth, stroke: strokeColor, strokeLinecap: strokeLinecap })
                 )
             );
         }
@@ -79,7 +88,8 @@ Arc.propTypes = {
     degrees: _propTypes2.default.number,
     strokeWidth: _propTypes2.default.number,
     strokeColor: _propTypes2.default.string,
-    fillColor: _propTypes2.default.string
+    fillColor: _propTypes2.default.string,
+    strokeLinecap: _propTypes2.default.oneOf(["butt", "round", "square"])
 };
 exports.default = Arc;
 
@@ -90,5 +100,6 @@ Arc.defaultProps = {
     degrees: 360,
     strokeWidth: 5,
     strokeColor: '#fff',
-    fillColor: 'none'
+    fillColor: 'none',
+    strokeLinecap: 'butt'
 };
