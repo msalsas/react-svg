@@ -38,6 +38,10 @@ You can use [react-storybook](https://github.com/kadirahq/react-storybook) for d
 
 Go to [localhost:9001](http://localhost:9001)
 
+To run tests:
+
+`npm run test`
+
 Deployment:
 
 To build all components into `dist` directory run:

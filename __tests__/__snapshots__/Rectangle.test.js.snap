@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Rectangle component should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Rectangle
+    fillColor="none"
+    height={200}
+    strokeColor="orange"
+    strokeWidth={5}
+    width={100}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <g>
+        <rect
+          className="msalsas-rectangle"
+          fill="none"
+          height={200}
+          stroke="orange"
+          strokeWidth={5}
+          width={100}
+          x={5}
+          y={5}
+        />
+      </g>,
+      "height": 210,
+      "width": 110,
+      "xmlns": "http://www.w3.org/2000/svg",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <rect
+          className="msalsas-rectangle"
+          fill="none"
+          height={200}
+          stroke="orange"
+          strokeWidth={5}
+          width={100}
+          x={5}
+          y={5}
+        />,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "msalsas-rectangle",
+          "fill": "none",
+          "height": 200,
+          "stroke": "orange",
+          "strokeWidth": 5,
+          "width": 100,
+          "x": 5,
+          "y": 5,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "rect",
+      },
+      "type": "g",
+    },
+    "type": "svg",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <g>
+          <rect
+            className="msalsas-rectangle"
+            fill="none"
+            height={200}
+            stroke="orange"
+            strokeWidth={5}
+            width={100}
+            x={5}
+            y={5}
+          />
+        </g>,
+        "height": 210,
+        "width": 110,
+        "xmlns": "http://www.w3.org/2000/svg",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <rect
+            className="msalsas-rectangle"
+            fill="none"
+            height={200}
+            stroke="orange"
+            strokeWidth={5}
+            width={100}
+            x={5}
+            y={5}
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "msalsas-rectangle",
+            "fill": "none",
+            "height": 200,
+            "stroke": "orange",
+            "strokeWidth": 5,
+            "width": 100,
+            "x": 5,
+            "y": 5,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "rect",
+        },
+        "type": "g",
+      },
+      "type": "svg",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
