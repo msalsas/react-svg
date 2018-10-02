@@ -1,4 +1,7 @@
-# react-svg-components [![Build Status](https://travis-ci.org/msalsas/react-svg-components.svg?branch=master)](https://travis-ci.org/msalsas/react-svg-components)
+# react-svg-components 
+
+[![Build Status](https://travis-ci.org/msalsas/react-svg-components.svg?branch=master)](https://travis-ci.org/msalsas/react-svg-components)
+[![npm version](https://badge.fury.io/js/react-svg-components.svg)](https://badge.fury.io/js/react-svg-components)
 
 SVG components built with [React][react].
 
