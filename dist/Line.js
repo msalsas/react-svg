@@ -54,22 +54,29 @@ var Line = function (_Component) {
     _createClass(Line, [{
         key: 'render',
         value: function render() {
-            var degreesInRadians = (this.props.degrees - 90) * Math.PI / 180.0;
+            var _props = this.props,
+                lineLength = _props.lineLength,
+                degrees = _props.degrees,
+                strokeWidth = _props.strokeWidth,
+                strokeColor = _props.strokeColor,
+                strokeLinecap = _props.strokeLinecap;
+
+            var degreesInRadians = (degrees - 90) * Math.PI / 180.0;
             var offsetY = 0;
-            if (this.props.degrees > 90 && this.props.degrees <= 180) {
-                degreesInRadians = (this.props.degrees + 90) * Math.PI / 180.0;
-                offsetY = Math.abs(this.props.lineLength * Math.sin(degreesInRadians));
+            if (degrees > 90 && degrees <= 180) {
+                degreesInRadians = (degrees + 90) * Math.PI / 180.0;
+                offsetY = Math.abs(lineLength * Math.sin(degreesInRadians));
             }
-            var width = Math.abs(this.props.lineLength * Math.cos(degreesInRadians)) + this.props.strokeWidth * 2;
-            var height = Math.abs(this.props.lineLength * Math.sin(degreesInRadians)) + this.props.strokeWidth * 2;
+            var width = Math.abs(lineLength * Math.cos(degreesInRadians)) + strokeWidth * 2;
+            var height = Math.abs(lineLength * Math.sin(degreesInRadians)) + strokeWidth * 2;
             return _react2.default.createElement(
                 'svg',
                 { width: width, height: height, xmlns: 'http://www.w3.org/2000/svg' },
                 _react2.default.createElement(
                     'g',
                     null,
-                    _react2.default.createElement('path', { d: this.describeLine(this.props.lineLength, degreesInRadians, offsetY, this.props.strokeWidth), className: 'msalsas-line',
-                        fill: 'none', strokeWidth: this.props.strokeWidth, stroke: this.props.strokeColor })
+                    _react2.default.createElement('path', { d: this.describeLine(lineLength, degreesInRadians, offsetY, strokeWidth), className: 'msalsas-line',
+                        fill: 'none', strokeWidth: strokeWidth, stroke: strokeColor, strokeLinecap: strokeLinecap })
                 )
             );
         }
@@ -79,10 +86,11 @@ var Line = function (_Component) {
 }(_react.Component);
 
 Line.propTypes = {
-    length: _propTypes2.default.number,
+    lineLength: _propTypes2.default.number,
     degrees: _propTypes2.default.number,
     strokeWidth: _propTypes2.default.number,
-    strokeColor: _propTypes2.default.string
+    strokeColor: _propTypes2.default.string,
+    strokeLinecap: _propTypes2.default.oneOf(["butt", "round", "square"])
 };
 exports.default = Line;
 
@@ -91,5 +99,6 @@ Line.defaultProps = {
     lineLength: 150,
     degrees: 45,
     strokeWidth: 5,
-    strokeColor: '#fff'
+    strokeColor: '#fff',
+    strokeLinecap: 'butt'
 };

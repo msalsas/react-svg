@@ -34,16 +34,21 @@ var Rectangle = function (_Component) {
     _createClass(Rectangle, [{
         key: 'render',
         value: function render() {
-            var width = this.props.width + this.props.strokeWidth * 2;
-            var height = this.props.height + this.props.strokeWidth * 2;
+            var _props = this.props,
+                strokeWidth = _props.strokeWidth,
+                strokeColor = _props.strokeColor,
+                fillColor = _props.fillColor;
+
+            var width = this.props.width + strokeWidth * 2;
+            var height = this.props.height + strokeWidth * 2;
             return _react2.default.createElement(
                 'svg',
                 { width: width, height: height, xmlns: 'http://www.w3.org/2000/svg' },
                 _react2.default.createElement(
                     'g',
                     null,
-                    _react2.default.createElement('rect', { x: this.props.strokeWidth, y: this.props.strokeWidth, width: this.props.width, height: this.props.height, className: 'msalsas-rectangle',
-                        fill: this.props.fillColor, strokeWidth: this.props.strokeWidth, stroke: this.props.strokeColor })
+                    _react2.default.createElement('rect', { x: strokeWidth, y: strokeWidth, width: this.props.width, height: this.props.height, className: 'msalsas-rectangle',
+                        fill: fillColor, strokeWidth: strokeWidth, stroke: strokeColor })
                 )
             );
         }

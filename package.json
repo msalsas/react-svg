@@ -1,6 +1,6 @@
 {
   "name": "react-svg-components",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "SVG components library for ReactJS.",
   "main": "dist/react-svg-components.js",
   "repository": {
@@ -25,19 +25,23 @@
     "react": "^16.2.0"
   },
   "devDependencies": {
+    "@storybook/addons": "^4.0.0-alpha.1",
+    "@storybook/react": "^4.0.0-alpha.1",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^7.0.0-beta.3",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
+    "jest": "^23.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "@storybook/react": "^4.0.0-alpha.1",
-    "@storybook/addons": "^4.0.0-alpha.1",
-    "babel-runtime": "^7.0.0-beta.3"
+    "react-dom": "^16.2.0"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001"
+    "storybook": "start-storybook -p 9001",
+    "test": "jest"
   }
 }

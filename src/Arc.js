@@ -1,22 +1,24 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Arc extends Component {
     static propTypes = {
-        radius: PropTypes.number,
+        radius       : PropTypes.number,
         degreesOffset: PropTypes.number,
-        degrees: PropTypes.number,
-        strokeWidth: PropTypes.number,
-        strokeColor: PropTypes.string,
-        fillColor: PropTypes.string
+        degrees      : PropTypes.number,
+        strokeWidth  : PropTypes.number,
+        strokeColor  : PropTypes.string,
+        fillColor    : PropTypes.string,
+        strokeLinecap: PropTypes.oneOf(["butt", "round", "square"]),
     };
 
     render() {
+        const {radius, degreesOffset, degrees, strokeWidth, strokeColor, fillColor, strokeLinecap} = this.props;
         return (
-            <svg width={this.props.radius * 2 + this.props.strokeWidth * 2} height={this.props.radius * 2 + this.props.strokeWidth * 2} xmlns="http://www.w3.org/2000/svg">
+            <svg width={radius * 2 + strokeWidth * 2} height={radius * 2 + strokeWidth * 2} xmlns="http://www.w3.org/2000/svg">
                 <g>
-                    <path d={this.describeArc(this.props.radius, this.props.strokeWidth, this.props.degreesOffset, this.props.degrees)} className="msalsas-arc"
-                    fill={this.props.fillColor} strokeWidth={this.props.strokeWidth} stroke={this.props.strokeColor}/>
+                    <path d={this.describeArc(radius, strokeWidth, degreesOffset, degrees)} className="msalsas-arc"
+                          fill={fillColor} strokeWidth={strokeWidth} stroke={strokeColor} strokeLinecap={strokeLinecap}/>
                 </g>
             </svg>
         );
@@ -46,11 +48,12 @@ export default class Arc extends Component {
 }
 
 Arc.defaultProps = {
-    radius: 50,
+    radius       : 50,
     degreesOffset: 45,
-    degrees: 360,
-    strokeWidth: 5,
-    strokeColor: '#fff',
-    fillColor: 'none'
+    degrees      : 360,
+    strokeWidth  : 5,
+    strokeColor  : '#fff',
+    fillColor    : 'none',
+    strokeLinecap: 'butt'
 };
 

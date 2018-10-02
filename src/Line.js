@@ -1,28 +1,30 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Line extends Component {
     static propTypes = {
-        length: PropTypes.number,
-        degrees: PropTypes.number,
-        strokeWidth: PropTypes.number,
-        strokeColor: PropTypes.string
+        lineLength   : PropTypes.number,
+        degrees      : PropTypes.number,
+        strokeWidth  : PropTypes.number,
+        strokeColor  : PropTypes.string,
+        strokeLinecap: PropTypes.oneOf(["butt", "round", "square"]),
     };
 
     render() {
-        let degreesInRadians = (this.props.degrees - 90) * Math.PI / 180.0;
+        const {lineLength, degrees, strokeWidth, strokeColor, strokeLinecap} = this.props;
+        let degreesInRadians = (degrees - 90) * Math.PI / 180.0;
         let offsetY = 0;
-        if (this.props.degrees > 90 && this.props.degrees <= 180) {
-            degreesInRadians = (this.props.degrees + 90) * Math.PI / 180.0;
-            offsetY = Math.abs(this.props.lineLength * Math.sin(degreesInRadians));
+        if (degrees > 90 && degrees <= 180) {
+            degreesInRadians = (degrees + 90) * Math.PI / 180.0;
+            offsetY = Math.abs(lineLength * Math.sin(degreesInRadians));
         }
-        let width = Math.abs(this.props.lineLength * Math.cos(degreesInRadians)) + this.props.strokeWidth * 2;
-        let height = Math.abs(this.props.lineLength * Math.sin(degreesInRadians)) + this.props.strokeWidth * 2;
+        let width = Math.abs(lineLength * Math.cos(degreesInRadians)) + strokeWidth * 2;
+        let height = Math.abs(lineLength * Math.sin(degreesInRadians)) + strokeWidth * 2;
         return (
             <svg width={width} height={height} xmlns="http://www.w3.org/2000/svg">
                 <g>
-                    <path d={this.describeLine(this.props.lineLength, degreesInRadians, offsetY, this.props.strokeWidth)} className="msalsas-line"
-                    fill="none" strokeWidth={this.props.strokeWidth} stroke={this.props.strokeColor}/>
+                    <path d={this.describeLine(lineLength, degreesInRadians, offsetY, strokeWidth)} className="msalsas-line"
+                          fill="none" strokeWidth={strokeWidth} stroke={strokeColor} strokeLinecap={strokeLinecap}/>
                 </g>
             </svg>
         );
@@ -47,8 +49,9 @@ export default class Line extends Component {
 }
 
 Line.defaultProps = {
-    lineLength: 150,
-    degrees: 45,
-    strokeWidth: 5,
-    strokeColor: '#fff'
+    lineLength   : 150,
+    degrees      : 45,
+    strokeWidth  : 5,
+    strokeColor  : '#fff',
+    strokeLinecap: 'butt'
 };

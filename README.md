@@ -1,4 +1,7 @@
-# react-svg-components [![Build Status](https://travis-ci.org/msalsas/react-svg-components.svg?branch=master)](https://travis-ci.org/msalsas/react-svg-components)
+# react-svg-components 
+
+[![Build Status](https://travis-ci.org/msalsas/react-svg-components.svg?branch=master)](https://travis-ci.org/msalsas/react-svg-components)
+[![npm version](https://badge.fury.io/js/react-svg-components.svg)](https://badge.fury.io/js/react-svg-components)
 
 SVG components built with [React][react].
 
@@ -14,9 +17,9 @@ Usage:
 
 Here's an example for each component:
 
-`<Arc radius={25} degreesOffset={15} degrees={270} strokeWidth={2} strokeColor={'#fff'} fillColor={'none'}/>`
+`<Arc radius={25} degreesOffset={15} degrees={270} strokeWidth={2} strokeColor={'#fff'} fillColor={'none'} strokeLinecap={'round'}/>`
 
-`<Line lineLength={150} degrees={15} strokeWidth={5} strokeColor={'#fff'}/>`
+`<Line lineLength={150} degrees={15} strokeWidth={5} strokeColor={'#fff'} strokeLinecap={'square'}/>`
 
 `<Rectangle width={150} height={15} strokeWidth={5} strokeColor={'#fff'} fillColor={'#fff'}/>`
 
@@ -37,6 +40,10 @@ You can use [react-storybook](https://github.com/kadirahq/react-storybook) for d
 `npm run storybook`
 
 Go to [localhost:9001](http://localhost:9001)
+
+To run tests:
+
+`npm run test`
 
 Deployment:
 
